@@ -1,6 +1,10 @@
 const Gpio = require('onoff').Gpio;
 
 const led = new Gpio(17, 'out');
-const button = new Gpio(4, 'in', 'both');
+let nextValue = Gpio.HIGH;
 
-button.watch((err, value) => led.writeSync(value));
+setInterval(() => {
+  led.writeSync(nextValue);
+  if (nextValue === Gpio.HIGH) nextValue = Gpio.LOW;
+  else nextValue = Gpio.HIGH;
+}, 5000);
