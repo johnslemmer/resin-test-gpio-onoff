@@ -16,13 +16,13 @@ const switch7 = new Gpio(13, 'high');
 (async function main() {
   while (true) {
     allOn();
-    await sleep(1000);
+    await sleep(5000);
     allOff();
-    await sleep(1000);
-    cascadeOn();
-    await sleep(1000);
-    cascadeOff();
-    await sleep(1000);
+    await sleep(5000);
+    // cascadeOn();
+    // await sleep(1000);
+    // cascadeOff();
+    // await sleep(1000);
   }
 })();
 
