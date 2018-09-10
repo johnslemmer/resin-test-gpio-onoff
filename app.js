@@ -14,7 +14,9 @@ const switch6 = new Gpio(6, 'high');
 const switch7 = new Gpio(13, 'high');
 
 (async function main() {
+  console.log('here')
   while (true) {
+    console.log('looping')
     allOn();
     await sleep(1000);
     allOff();
