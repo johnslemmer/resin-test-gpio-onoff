@@ -25,6 +25,7 @@ const switch7 = new Gpio(13, 'high');
     await sleep(1000);
     await cascadeOff();
     await sleep(1000);
+    console.log('end loop')
   }
 })();
 
